@@ -1,0 +1,300 @@
+<|startoftext|>
+STATE/TERRITORY_FIELD : text_TYPE, TEXT/BACKGROUND_COLOUR_FIELD : text_TYPE, FORMAT_FIELD : text_TYPE, CURRENT_SLOGAN_FIELD : text_TYPE, CURRENT_SERIES_FIELD : text_TYPE, NOTES_FIELD : text_TYPE | Tell me what the notes are for South Australia | SELECT  NOTES_FIELD FROM table WHERE CURRENT_SLOGAN_FIELD = 'SOUTH AUSTRALIA'
+<|endoftext|>
+<|startoftext|>
+STATE/TERRITORY_FIELD : text_TYPE, TEXT/BACKGROUND_COLOUR_FIELD : text_TYPE, FORMAT_FIELD : text_TYPE, CURRENT_SLOGAN_FIELD : text_TYPE, CURRENT_SERIES_FIELD : text_TYPE, NOTES_FIELD : text_TYPE | What is the current series where the new series began in June 2011 ? | SELECT  CURRENT_SERIES_FIELD FROM table WHERE NOTES_FIELD = 'New series began in June 2011'
+<|endoftext|>
+<|startoftext|>
+STATE/TERRITORY_FIELD : text_TYPE, TEXT/BACKGROUND_COLOUR_FIELD : text_TYPE, FORMAT_FIELD : text_TYPE, CURRENT_SLOGAN_FIELD : text_TYPE, CURRENT_SERIES_FIELD : text_TYPE, NOTES_FIELD : text_TYPE | What is the format for South Australia ? | SELECT  FORMAT_FIELD FROM table WHERE STATE/TERRITORY_FIELD = 'South Australia'
+<|endoftext|>
+<|startoftext|>
+STATE/TERRITORY_FIELD : text_TYPE, TEXT/BACKGROUND_COLOUR_FIELD : text_TYPE, FORMAT_FIELD : text_TYPE, CURRENT_SLOGAN_FIELD : text_TYPE, CURRENT_SERIES_FIELD : text_TYPE, NOTES_FIELD : text_TYPE | Name the background colour for the Australian Capital Territory | SELECT  TEXT/BACKGROUND_COLOUR_FIELD FROM table WHERE STATE/TERRITORY_FIELD = 'Australian Capital Territory'
+<|endoftext|>
+<|startoftext|>
+ORDER_YEAR_FIELD : text_TYPE, MANUFACTURER_FIELD : text_TYPE, MODEL_FIELD : text_TYPE, FLEET_SERIES_(QUANTITY)_FIELD : text_TYPE, POWERTRAIN_(ENGINE/TRANSMISSION)_FIELD : text_TYPE, FUEL_PROPULSION_FIELD : text_TYPE | how many times is the fuel propulsion is cng ? | SELECT COUNT FLEET_SERIES_(QUANTITY)_FIELD FROM table WHERE FUEL_PROPULSION_FIELD = 'CNG'
+<|endoftext|>
+<|startoftext|>
+ORDER_YEAR_FIELD : text_TYPE, MANUFACTURER_FIELD : text_TYPE, MODEL_FIELD : text_TYPE, FLEET_SERIES_(QUANTITY)_FIELD : text_TYPE, POWERTRAIN_(ENGINE/TRANSMISSION)_FIELD : text_TYPE, FUEL_PROPULSION_FIELD : text_TYPE | what is the fuel propulsion where the fleet series (quantity) is var0 ? | SELECT  FUEL_PROPULSION_FIELD FROM table WHERE FLEET_SERIES_(QUANTITY)_FIELD = '310-329 (20)'
+<|endoftext|>
+<|startoftext|>
+ORDER_YEAR_FIELD : text_TYPE, MANUFACTURER_FIELD : text_TYPE, MODEL_FIELD : text_TYPE, FLEET_SERIES_(QUANTITY)_FIELD : text_TYPE, POWERTRAIN_(ENGINE/TRANSMISSION)_FIELD : text_TYPE, FUEL_PROPULSION_FIELD : text_TYPE | who is the manufacturer for the order year var0 ? | SELECT  MANUFACTURER_FIELD FROM table WHERE ORDER_YEAR_FIELD = 1998
+<|endoftext|>
+<|startoftext|>
+ORDER_YEAR_FIELD : text_TYPE, MANUFACTURER_FIELD : text_TYPE, MODEL_FIELD : text_TYPE, FLEET_SERIES_(QUANTITY)_FIELD : text_TYPE, POWERTRAIN_(ENGINE/TRANSMISSION)_FIELD : text_TYPE, FUEL_PROPULSION_FIELD : text_TYPE | how many times is the model ge40lfr ? | SELECT COUNT MANUFACTURER_FIELD FROM table WHERE MODEL_FIELD = 'GE40LFR'
+<|endoftext|>
+<|startoftext|>
+ORDER_YEAR_FIELD : text_TYPE, MANUFACTURER_FIELD : text_TYPE, MODEL_FIELD : text_TYPE, FLEET_SERIES_(QUANTITY)_FIELD : text_TYPE, POWERTRAIN_(ENGINE/TRANSMISSION)_FIELD : text_TYPE, FUEL_PROPULSION_FIELD : text_TYPE | how many times is the fleet series (quantity) is var0 ? | SELECT COUNT ORDER_YEAR_FIELD FROM table WHERE FLEET_SERIES_(QUANTITY)_FIELD = '468-473 (6)'
+<|endoftext|>
+<|startoftext|>
+ORDER_YEAR_FIELD : text_TYPE, MANUFACTURER_FIELD : text_TYPE, MODEL_FIELD : text_TYPE, FLEET_SERIES_(QUANTITY)_FIELD : text_TYPE, POWERTRAIN_(ENGINE/TRANSMISSION)_FIELD : text_TYPE, FUEL_PROPULSION_FIELD : text_TYPE | what is the powertrain (engine/transmission) when the order year is var0 ? | SELECT  POWERTRAIN_(ENGINE/TRANSMISSION)_FIELD FROM table WHERE ORDER_YEAR_FIELD = 2000
+<|endoftext|>
+<|startoftext|>
+AIRCRAFT_FIELD : text_TYPE, DESCRIPTION_FIELD : text_TYPE, MAX_GROSS_WEIGHT_FIELD : text_TYPE, TOTAL_DISK_AREA_FIELD : text_TYPE, MAX_DISK_LOADING_FIELD : text_TYPE | What if the description of a ch-47d chinook ? | SELECT  DESCRIPTION_FIELD FROM table WHERE AIRCRAFT_FIELD = 'CH-47D Chinook'
+<|endoftext|>
+<|startoftext|>
+AIRCRAFT_FIELD : text_TYPE, DESCRIPTION_FIELD : text_TYPE, MAX_GROSS_WEIGHT_FIELD : text_TYPE, TOTAL_DISK_AREA_FIELD : text_TYPE, MAX_DISK_LOADING_FIELD : text_TYPE | What is the max gross weight of the Robinson R-22 ? | SELECT  MAX_GROSS_WEIGHT_FIELD FROM table WHERE AIRCRAFT_FIELD = 'Robinson R-22'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | What school did player number var0 come from ? | SELECT  SCHOOL/CLUB_TEAM_FIELD FROM table WHERE NO._FIELD = 6
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | What school did the player that has been in Toronto from var0 come from ? | SELECT  SCHOOL/CLUB_TEAM_FIELD FROM table WHERE YEARS_IN_TORONTO_FIELD = '2012-present'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | What position did the player from Baylor play ? | SELECT  POSITION_FIELD FROM table WHERE SCHOOL/CLUB_TEAM_FIELD = 'Baylor'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | Who played in the Toronto Raptors from var0 ? | SELECT  PLAYER_FIELD FROM table WHERE YEARS_IN_TORONTO_FIELD = '1995-96'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | Which number was Patrick O'Bryant ? | SELECT  NO._FIELD FROM table WHERE PLAYER_FIELD = 'Patrick O'Bryant'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | What school did Patrick O'Bryant play for ? | SELECT  SCHOOL/CLUB_TEAM_FIELD FROM table WHERE PLAYER_FIELD = 'Patrick O'Bryant'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | How many number does Fordham school have ? | SELECT COUNT NO._FIELD FROM table WHERE SCHOOL/CLUB_TEAM_FIELD = 'Fordham'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | Which position does Loren Woods play ? | SELECT  POSITION_FIELD FROM table WHERE PLAYER_FIELD = 'Loren Woods'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | What number is the player that played var0 | SELECT MIN NO._FIELD FROM table WHERE YEARS_IN_TORONTO_FIELD = '1998-2001'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | Which country is the player that went to Georgetown from ? | SELECT  NATIONALITY_FIELD FROM table WHERE SCHOOL/CLUB_TEAM_FIELD = 'Georgetown'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | When did the player from Hawaii play for Toronto ? | SELECT  YEARS_IN_TORONTO_FIELD FROM table WHERE SCHOOL/CLUB_TEAM_FIELD = 'Hawaii'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | During what period did Dell Curry play for Toronto ? | SELECT  YEARS_IN_TORONTO_FIELD FROM table WHERE PLAYER_FIELD = 'Dell Curry'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | What's the number of the player from Boise State ? | SELECT  NO._FIELD FROM table WHERE SCHOOL/CLUB_TEAM_FIELD = 'Boise State'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | What's Dell Curry nationality ? | SELECT  NATIONALITY_FIELD FROM table WHERE PLAYER_FIELD = 'Dell Curry'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | which player is from georgia | SELECT  PLAYER_FIELD FROM table WHERE SCHOOL/CLUB_TEAM_FIELD = 'Georgia'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : real_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | what nationality is the player who played from var0 | SELECT  NATIONALITY_FIELD FROM table WHERE YEARS_IN_TORONTO_FIELD = '1997-98'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | Which positions were in Toronto in var0 ? | SELECT  POSITION_FIELD FROM table WHERE YEARS_IN_TORONTO_FIELD = 2004
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, NO._FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, YEARS_IN_TORONTO_FIELD : text_TYPE, SCHOOL/CLUB_TEAM_FIELD : text_TYPE | How many players were with the school or club team La Salle ? | SELECT COUNT PLAYER_FIELD FROM table WHERE SCHOOL/CLUB_TEAM_FIELD = 'La Salle'
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, TOURNAMENTS_PLAYED_FIELD : real_TYPE, CUTS_MADE*_FIELD : real_TYPE, WINS_FIELD : real_TYPE, 2ND_FIELD : real_TYPE, TOP_10S_FIELD : real_TYPE, BEST_FINISH_FIELD : text_TYPE, EARNINGS_($)_FIELD : real_TYPE, MONEY_LIST_RANK_FIELD : text_TYPE, SCORING_AVERAGE_FIELD : text_TYPE, SCORING_RANK_FIELD : text_TYPE | When the scoring rank was var0 , what was the best finish ? | SELECT  BEST_FINISH_FIELD FROM table WHERE TOURNAMENTS_PLAYED_FIELD0 = 117
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, TOURNAMENTS_PLAYED_FIELD : real_TYPE, CUTS_MADE*_FIELD : real_TYPE, WINS_FIELD : real_TYPE, 2ND_FIELD : real_TYPE, TOP_10S_FIELD : real_TYPE, BEST_FINISH_FIELD : text_TYPE, EARNINGS_($)_FIELD : real_TYPE, MONEY_LIST_RANK_FIELD : text_TYPE, SCORING_AVERAGE_FIELD : text_TYPE, SCORING_RANK_FIELD : text_TYPE | When the best finish was T69 , how many people came in 2nd ? | SELECT  2ND_FIELD FROM table WHERE BEST_FINISH_FIELD = 'T69'
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, TOURNAMENTS_PLAYED_FIELD : real_TYPE, CUTS_MADE*_FIELD : real_TYPE, WINS_FIELD : real_TYPE, 2ND_FIELD : real_TYPE, TOP_10S_FIELD : real_TYPE, BEST_FINISH_FIELD : text_TYPE, EARNINGS_($)_FIELD : real_TYPE, MONEY_LIST_RANK_FIELD : text_TYPE, SCORING_AVERAGE_FIELD : text_TYPE, SCORING_RANK_FIELD : text_TYPE | How many wins were there when the money list rank was var0 ? | SELECT COUNT WINS_FIELD FROM table WHERE MONEY_LIST_RANK_FIELD = 183
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, TOURNAMENTS_PLAYED_FIELD : real_TYPE, CUTS_MADE*_FIELD : real_TYPE, WINS_FIELD : real_TYPE, 2ND_FIELD : real_TYPE, TOP_10S_FIELD : real_TYPE, BEST_FINISH_FIELD : text_TYPE, EARNINGS_($)_FIELD : real_TYPE, MONEY_LIST_RANK_FIELD : text_TYPE, SCORING_AVERAGE_FIELD : text_TYPE, SCORING_RANK_FIELD : text_TYPE | When the money list rank was var0 , what was the scoring average ? | SELECT  SCORING_AVERAGE_FIELD FROM table WHERE MONEY_LIST_RANK_FIELD = 'n/a'
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, TOURNAMENTS_PLAYED_FIELD : real_TYPE, CUTS_MADE*_FIELD : real_TYPE, WINS_FIELD : real_TYPE, 2ND_FIELD : real_TYPE, TOP_10S_FIELD : real_TYPE, BEST_FINISH_FIELD : text_TYPE, EARNINGS_($)_FIELD : real_TYPE, MONEY_LIST_RANK_FIELD : text_TYPE, SCORING_AVERAGE_FIELD : text_TYPE, SCORING_RANK_FIELD : text_TYPE | What time was the highest for 2nd finishers ? | SELECT MAX 2ND_FIELD FROM table
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : real_TYPE, PLAYER_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, TEAM_FIELD : text_TYPE, DRAFT_PICK_#_FIELD : text_TYPE, DRAFT_CLASS_FIELD : text_TYPE, COLLEGE_FIELD : text_TYPE | When did the Metrostars have their first Rookie of the Year winner ? | SELECT MIN SEASON_FIELD FROM table WHERE TEAM_FIELD = 'MetroStars'
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : real_TYPE, PLAYER_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, TEAM_FIELD : text_TYPE, DRAFT_PICK_#_FIELD : text_TYPE, DRAFT_CLASS_FIELD : text_TYPE, COLLEGE_FIELD : text_TYPE | What college did the Rookie of the Year from the Columbus Crew attend ? | SELECT  COLLEGE_FIELD FROM table WHERE TEAM_FIELD = 'Columbus Crew'
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : real_TYPE, PLAYER_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, TEAM_FIELD : text_TYPE, DRAFT_PICK_#_FIELD : text_TYPE, DRAFT_CLASS_FIELD : text_TYPE, COLLEGE_FIELD : text_TYPE | How many teams had a #var0 draft pick that won the Rookie of the Year Award ? | SELECT COUNT TEAM_FIELD FROM table WHERE DRAFT_PICK_#_FIELD = 1
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : real_TYPE, PLAYER_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, TEAM_FIELD : text_TYPE, DRAFT_PICK_#_FIELD : text_TYPE, DRAFT_CLASS_FIELD : text_TYPE, COLLEGE_FIELD : text_TYPE | What position did the #var0 draft pick play ? | SELECT  POSITION_FIELD FROM table WHERE DRAFT_PICK_#_FIELD = 10
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, YEARS_PLAYED_FIELD : text_TYPE, TOTAL_W-L_FIELD : text_TYPE, SINGLES_W-L_FIELD : text_TYPE, DOUBLES_W-L_FIELD : text_TYPE | what's the years played with singles w-l of var0 | SELECT  YEARS_PLAYED_FIELD FROM table WHERE SINGLES_W-L_FIELD = '3–2'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, YEARS_PLAYED_FIELD : text_TYPE, TOTAL_W-L_FIELD : text_TYPE, SINGLES_W-L_FIELD : text_TYPE, DOUBLES_W-L_FIELD : text_TYPE | what's the doubles w-l for player seol jae-min (none) | SELECT  DOUBLES_W-L_FIELD FROM table WHERE PLAYER_FIELD = 'Seol Jae-Min (none)'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, YEARS_PLAYED_FIELD : text_TYPE, TOTAL_W-L_FIELD : text_TYPE, SINGLES_W-L_FIELD : text_TYPE, DOUBLES_W-L_FIELD : text_TYPE | what's the singles w-l for kim doo-hwan | SELECT  SINGLES_W-L_FIELD FROM table WHERE PLAYER_FIELD = 'Kim Doo-Hwan'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, YEARS_PLAYED_FIELD : text_TYPE, TOTAL_W-L_FIELD : text_TYPE, SINGLES_W-L_FIELD : text_TYPE, DOUBLES_W-L_FIELD : text_TYPE | what's the total number of singles w-l with doubles w-l of var0 and total w-l of var1 | SELECT COUNT SINGLES_W-L_FIELD FROM table WHERE DOUBLES_W-L_FIELD = '0–0' AND TOTAL_W-L_FIELD = '3–1'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, YEARS_PLAYED_FIELD : text_TYPE, TOTAL_W-L_FIELD : text_TYPE, SINGLES_W-L_FIELD : text_TYPE, DOUBLES_W-L_FIELD : text_TYPE | what's the doubles w-l with years played value of var0 | SELECT  DOUBLES_W-L_FIELD FROM table WHERE YEARS_PLAYED_FIELD = '1 (1968)'
+<|endoftext|>
+<|startoftext|>
+PLAYER_FIELD : text_TYPE, YEARS_PLAYED_FIELD : text_TYPE, TOTAL_W-L_FIELD : text_TYPE, SINGLES_W-L_FIELD : text_TYPE, DOUBLES_W-L_FIELD : text_TYPE | what years are played for player im chung-yang | SELECT  YEARS_PLAYED_FIELD FROM table WHERE PLAYER_FIELD = 'Im Chung-Yang'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, CANTON_FIELD : text_TYPE, HEIGHT_(METERS)_FIELD : real_TYPE, CREST_LENGTH_(METERS)_FIELD : real_TYPE, TYPE_FIELD : text_TYPE, YEAR_OF_CONSTRUCTION_FIELD : real_TYPE, NAME_OF_THE_LAKE_FIELD : text_TYPE | What is the name of the var0 crest length ? | SELECT  NAME_FIELD FROM table WHERE CREST_LENGTH_(METERS)_FIELD = 375
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, CANTON_FIELD : text_TYPE, HEIGHT_(METERS)_FIELD : real_TYPE, CREST_LENGTH_(METERS)_FIELD : real_TYPE, TYPE_FIELD : text_TYPE, YEAR_OF_CONSTRUCTION_FIELD : real_TYPE, NAME_OF_THE_LAKE_FIELD : text_TYPE | What is year of construction of spitallamm ? | SELECT MIN YEAR_OF_CONSTRUCTION_FIELD FROM table WHERE NAME_FIELD = 'Spitallamm'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, CANTON_FIELD : text_TYPE, HEIGHT_(METERS)_FIELD : real_TYPE, CREST_LENGTH_(METERS)_FIELD : real_TYPE, TYPE_FIELD : text_TYPE, YEAR_OF_CONSTRUCTION_FIELD : real_TYPE, NAME_OF_THE_LAKE_FIELD : text_TYPE | What is the canton of grande dixence ? | SELECT  CANTON_FIELD FROM table WHERE NAME_FIELD = 'Grande Dixence'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, CANTON_FIELD : text_TYPE, HEIGHT_(METERS)_FIELD : real_TYPE, CREST_LENGTH_(METERS)_FIELD : real_TYPE, TYPE_FIELD : text_TYPE, YEAR_OF_CONSTRUCTION_FIELD : real_TYPE, NAME_OF_THE_LAKE_FIELD : text_TYPE | What is the name where lago di luzzone is ? | SELECT  NAME_FIELD FROM table WHERE NAME_OF_THE_LAKE_FIELD = 'Lago di Luzzone'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, DIRECTION_FIELD : text_TYPE, MANTRA_FIELD : text_TYPE, WEAPON_FIELD : text_TYPE, CONSORT_FIELD : text_TYPE, GRAHA_(PLANET)_FIELD : text_TYPE, GUARDIAN_MĀTṚKĀ_FIELD : text_TYPE | What is the guardian mātṛkā for the guardian whose consort is Svāhā ? | SELECT  GUARDIAN_MĀTṚKĀ_FIELD FROM table WHERE CONSORT_FIELD = 'Svāhā'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, DIRECTION_FIELD : text_TYPE, MANTRA_FIELD : text_TYPE, WEAPON_FIELD : text_TYPE, CONSORT_FIELD : text_TYPE, GRAHA_(PLANET)_FIELD : text_TYPE, GUARDIAN_MĀTṚKĀ_FIELD : text_TYPE | Where the mantra is " oṃ yaṃ vāyuve namaḥ " , what is the direction of the guardian ? | SELECT  DIRECTION_FIELD FROM table WHERE MANTRA_FIELD = 'Oṃ Yaṃ Vāyuve Namaḥ'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, DIRECTION_FIELD : text_TYPE, MANTRA_FIELD : text_TYPE, WEAPON_FIELD : text_TYPE, CONSORT_FIELD : text_TYPE, GRAHA_(PLANET)_FIELD : text_TYPE, GUARDIAN_MĀTṚKĀ_FIELD : text_TYPE | What weapon is used by the guardian whose consort is śacī ? | SELECT  WEAPON_FIELD FROM table WHERE CONSORT_FIELD = 'Śacī'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, DIRECTION_FIELD : text_TYPE, MANTRA_FIELD : text_TYPE, WEAPON_FIELD : text_TYPE, CONSORT_FIELD : text_TYPE, GRAHA_(PLANET)_FIELD : text_TYPE, GUARDIAN_MĀTṚKĀ_FIELD : text_TYPE | What are the directions for the guardian whose weapon is khaḍga (sword) ? | SELECT  DIRECTION_FIELD FROM table WHERE WEAPON_FIELD = 'Khaḍga (sword)'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, DIRECTION_FIELD : text_TYPE, MANTRA_FIELD : text_TYPE, WEAPON_FIELD : text_TYPE, CONSORT_FIELD : text_TYPE, GRAHA_(PLANET)_FIELD : text_TYPE, GUARDIAN_MĀTṚKĀ_FIELD : text_TYPE | What are the weapons used by guardians for the direction East ? | SELECT  WEAPON_FIELD FROM table WHERE DIRECTION_FIELD = 'East'
+<|endoftext|>
+<|startoftext|>
+NAME_FIELD : text_TYPE, DIRECTION_FIELD : text_TYPE, MANTRA_FIELD : text_TYPE, WEAPON_FIELD : text_TYPE, CONSORT_FIELD : text_TYPE, GRAHA_(PLANET)_FIELD : text_TYPE, GUARDIAN_MĀTṚKĀ_FIELD : text_TYPE | What are the directions for the guardian whose graha (planet) is bṛhaspati (Jupiter) ? | SELECT  DIRECTION_FIELD FROM table WHERE GRAHA_(PLANET)_FIELD = 'Bṛhaspati (Jupiter)'
+<|endoftext|>
+<|startoftext|>
+MEMBER_FIELD : text_TYPE, HEADQUARTERS_FIELD : text_TYPE, CLASSIFICATION_FIELD : text_TYPE, CHAPTERS_FIELD : real_TYPE, FOUNDED_FIELD : text_TYPE, UCCFS_FIELD : real_TYPE | What is the number of chapters listed for the fraternity with a headquarters in Austin , Texas ? | SELECT MAX CHAPTERS_FIELD FROM table WHERE CLASSIFICATION_FIELD = 'Fraternity' AND HEADQUARTERS_FIELD = 'Austin, Texas'
+<|endoftext|>
+<|startoftext|>
+MEMBER_FIELD : text_TYPE, HEADQUARTERS_FIELD : text_TYPE, CLASSIFICATION_FIELD : text_TYPE, CHAPTERS_FIELD : real_TYPE, FOUNDED_FIELD : text_TYPE, UCCFS_FIELD : real_TYPE | What are the members listed with the sorority classification | SELECT  MEMBER_FIELD FROM table WHERE CLASSIFICATION_FIELD = 'Sorority'
+<|endoftext|>
+<|startoftext|>
+MEMBER_FIELD : text_TYPE, HEADQUARTERS_FIELD : text_TYPE, CLASSIFICATION_FIELD : text_TYPE, CHAPTERS_FIELD : real_TYPE, FOUNDED_FIELD : text_TYPE, UCCFS_FIELD : real_TYPE | Name the member that has var0 chapters | SELECT  MEMBER_FIELD FROM table WHERE CHAPTERS_FIELD = 12
+<|endoftext|>
+<|startoftext|>
+MEMBER_FIELD : text_TYPE, HEADQUARTERS_FIELD : text_TYPE, CLASSIFICATION_FIELD : text_TYPE, CHAPTERS_FIELD : real_TYPE, FOUNDED_FIELD : text_TYPE, UCCFS_FIELD : real_TYPE | Where is the headquarters of Alpha Nu Omega | SELECT  HEADQUARTERS_FIELD FROM table WHERE MEMBER_FIELD = 'Alpha Nu Omega'
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : text_TYPE, TYPHUS_FIELD : real_TYPE, TYPHOID_FEVER_FIELD : real_TYPE, RELAPSING_FEVER_FIELD : real_TYPE, SMALLPOX_FIELD : real_TYPE, MALARIA_FIELD : text_TYPE | what is the number of relapsing fever when malaria is var0 | SELECT MIN RELAPSING_FEVER_FIELD FROM table WHERE MALARIA_FIELD = 3000
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : text_TYPE, TYPHUS_FIELD : real_TYPE, TYPHOID_FEVER_FIELD : real_TYPE, RELAPSING_FEVER_FIELD : real_TYPE, SMALLPOX_FIELD : real_TYPE, MALARIA_FIELD : text_TYPE | what is the typhoid fever number for the year var0 | SELECT  TYPHOID_FEVER_FIELD FROM table WHERE YEAR_FIELD = 1934
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : text_TYPE, TYPHUS_FIELD : real_TYPE, TYPHOID_FEVER_FIELD : real_TYPE, RELAPSING_FEVER_FIELD : real_TYPE, SMALLPOX_FIELD : real_TYPE, MALARIA_FIELD : text_TYPE | What are all the typhus number when smallpox is var0 | SELECT  TYPHUS_FIELD FROM table WHERE SMALLPOX_FIELD = 4
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : text_TYPE, TYPHUS_FIELD : real_TYPE, TYPHOID_FEVER_FIELD : real_TYPE, RELAPSING_FEVER_FIELD : real_TYPE, SMALLPOX_FIELD : real_TYPE, MALARIA_FIELD : text_TYPE | what is the number of smallpox when typhoid fever is var0 | SELECT MAX SMALLPOX_FIELD FROM table WHERE TYPHOID_FEVER_FIELD = 293
+<|endoftext|>
+<|startoftext|>
+SCHOOL_FIELD : text_TYPE, LOCATION_FIELD : text_TYPE, FOUNDED_FIELD : real_TYPE, AFFILIATION_FIELD : text_TYPE, ENROLLMENT_FIELD : real_TYPE, TEAM_NICKNAME_FIELD : text_TYPE, PRIMARY_CONFERENCE_FIELD : text_TYPE | How many schools are in Bloomington , IN ? | SELECT COUNT FOUNDED_FIELD FROM table WHERE LOCATION_FIELD = 'Bloomington, IN'
+<|endoftext|>
+<|startoftext|>
+SCHOOL_FIELD : text_TYPE, LOCATION_FIELD : text_TYPE, FOUNDED_FIELD : real_TYPE, AFFILIATION_FIELD : text_TYPE, ENROLLMENT_FIELD : real_TYPE, TEAM_NICKNAME_FIELD : text_TYPE, PRIMARY_CONFERENCE_FIELD : text_TYPE | How many of the schools are designated private/Presbyterian ? | SELECT COUNT LOCATION_FIELD FROM table WHERE AFFILIATION_FIELD = 'Private/Presbyterian'
+<|endoftext|>
+<|startoftext|>
+SCHOOL_FIELD : text_TYPE, LOCATION_FIELD : text_TYPE, FOUNDED_FIELD : real_TYPE, AFFILIATION_FIELD : text_TYPE, ENROLLMENT_FIELD : real_TYPE, TEAM_NICKNAME_FIELD : text_TYPE, PRIMARY_CONFERENCE_FIELD : text_TYPE | In what year was Lindenwood University founded ? | SELECT MIN FOUNDED_FIELD FROM table WHERE SCHOOL_FIELD = 'Lindenwood University'
+<|endoftext|>
+<|startoftext|>
+SCHOOL_FIELD : text_TYPE, LOCATION_FIELD : text_TYPE, FOUNDED_FIELD : real_TYPE, AFFILIATION_FIELD : text_TYPE, ENROLLMENT_FIELD : real_TYPE, TEAM_NICKNAME_FIELD : text_TYPE, PRIMARY_CONFERENCE_FIELD : text_TYPE | How many of the schools listed are in Ames , IA ? | SELECT COUNT PRIMARY_CONFERENCE_FIELD FROM table WHERE LOCATION_FIELD = 'Ames, IA'
+<|endoftext|>
+<|startoftext|>
+COUNTRY_(_EXONYM_)_FIELD : text_TYPE, CAPITAL_(_EXONYM_)_FIELD : text_TYPE, COUNTRY_(_ENDONYM_)_FIELD : text_TYPE, CAPITAL_(_ENDONYM_)_FIELD : text_TYPE, OFFICIAL_OR_NATIVE_LANGUAGE(S)_(ALPHABET/SCRIPT)_FIELD : text_TYPE | What is the capital (endonym) where Douglas is the Capital (exonym) ? | SELECT  CAPITAL_(_ENDONYM_)_FIELD FROM table WHERE CAPITAL_(_EXONYM_)_FIELD = 'Douglas'
+<|endoftext|>
+<|startoftext|>
+COUNTRY_(_EXONYM_)_FIELD : text_TYPE, CAPITAL_(_EXONYM_)_FIELD : text_TYPE, COUNTRY_(_ENDONYM_)_FIELD : text_TYPE, CAPITAL_(_ENDONYM_)_FIELD : text_TYPE, OFFICIAL_OR_NATIVE_LANGUAGE(S)_(ALPHABET/SCRIPT)_FIELD : text_TYPE | How many countries (endonym) has the capital (endonym) of Jakarta ? | SELECT COUNT COUNTRY_(_ENDONYM_)_FIELD FROM table WHERE CAPITAL_(_ENDONYM_)_FIELD = 'Jakarta'
+<|endoftext|>
+<|startoftext|>
+COUNTRY_(_EXONYM_)_FIELD : text_TYPE, CAPITAL_(_EXONYM_)_FIELD : text_TYPE, COUNTRY_(_ENDONYM_)_FIELD : text_TYPE, CAPITAL_(_ENDONYM_)_FIELD : text_TYPE, OFFICIAL_OR_NATIVE_LANGUAGE(S)_(ALPHABET/SCRIPT)_FIELD : text_TYPE | What is the country (exonym) where the official or native language(s) (alphabet/script) is Icelandic ? | SELECT  COUNTRY_(_EXONYM_)_FIELD FROM table WHERE OFFICIAL_OR_NATIVE_LANGUAGE(S)_(ALPHABET/SCRIPT)_FIELD = 'Icelandic'
+<|endoftext|>
+<|startoftext|>
+COUNTRY_(_EXONYM_)_FIELD : text_TYPE, CAPITAL_(_EXONYM_)_FIELD : text_TYPE, COUNTRY_(_ENDONYM_)_FIELD : text_TYPE, CAPITAL_(_ENDONYM_)_FIELD : text_TYPE, OFFICIAL_OR_NATIVE_LANGUAGE(S)_(ALPHABET/SCRIPT)_FIELD : text_TYPE | In which country (endonym) is Irish English the official or native language(s) (alphabet/script) ? | SELECT  COUNTRY_(_ENDONYM_)_FIELD FROM table WHERE OFFICIAL_OR_NATIVE_LANGUAGE(S)_(ALPHABET/SCRIPT)_FIELD = 'Irish English'
+<|endoftext|>
+<|startoftext|>
+COUNTRY_(_EXONYM_)_FIELD : text_TYPE, CAPITAL_(_EXONYM_)_FIELD : text_TYPE, COUNTRY_(_ENDONYM_)_FIELD : text_TYPE, CAPITAL_(_ENDONYM_)_FIELD : text_TYPE, OFFICIAL_OR_NATIVE_LANGUAGE(S)_(ALPHABET/SCRIPT)_FIELD : text_TYPE | Which country (exonym) is the country (endonym) isle of man ellan vannin ? | SELECT  COUNTRY_(_EXONYM_)_FIELD FROM table WHERE COUNTRY_(_ENDONYM_)_FIELD = 'Isle of Man Ellan Vannin'
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : text_TYPE, NETWORK_FIELD : text_TYPE, SEASON_PREMIERE_FIELD : text_TYPE, SEASON_FINALE_FIELD : text_TYPE, TV_SEASON_FIELD : text_TYPE, RANKING_FIELD : text_TYPE, VIEWERS_(IN_MILLIONS)_FIELD : text_TYPE | The season premiere aired on September 11 , 2000 aired on how many networks ? | SELECT COUNT NETWORK_FIELD FROM table WHERE SEASON_PREMIERE_FIELD = 'September 11, 2000'
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : text_TYPE, NETWORK_FIELD : text_TYPE, SEASON_PREMIERE_FIELD : text_TYPE, SEASON_FINALE_FIELD : text_TYPE, TV_SEASON_FIELD : text_TYPE, RANKING_FIELD : text_TYPE, VIEWERS_(IN_MILLIONS)_FIELD : text_TYPE | What was the ranking of the season finale aired on May 8 , 2006 ? | SELECT  RANKING_FIELD FROM table WHERE SEASON_FINALE_FIELD = 'May 8, 2006'
+<|endoftext|>
+<|startoftext|>
+REGIONAL_COUNTY_MUNICIPALITY_(RCM)_FIELD : text_TYPE, POPULATION_CANADA_2011_CENSUS_FIELD : real_TYPE, LAND_AREA_FIELD : text_TYPE, DENSITY_(POP._PER_KM2)_FIELD : text_TYPE, SEAT_OF_RCM_FIELD : text_TYPE | what is the minimum population canada 2011 census with seat of rcm being cowansville | SELECT MIN POPULATION_CANADA_2011_CENSUS_FIELD FROM table WHERE SEAT_OF_RCM_FIELD = 'Cowansville'
+<|endoftext|>
+<|startoftext|>
+REGIONAL_COUNTY_MUNICIPALITY_(RCM)_FIELD : text_TYPE, POPULATION_CANADA_2011_CENSUS_FIELD : real_TYPE, LAND_AREA_FIELD : text_TYPE, DENSITY_(POP._PER_KM2)_FIELD : text_TYPE, SEAT_OF_RCM_FIELD : text_TYPE | what's the land area with seat of rcm being granby | SELECT  LAND_AREA_FIELD FROM table WHERE SEAT_OF_RCM_FIELD = 'Granby'
+<|endoftext|>
+<|startoftext|>
+COUNTY_FIELD : text_TYPE, ENGLISH_NAME_FIELD : text_TYPE, IRISH_NAME_FIELD : text_TYPE, POPULATION_FIELD : real_TYPE, IRISH_SPEAKERS_FIELD : text_TYPE | What is the population for County Mayo with the English Name Carrowteige ? | SELECT  POPULATION_FIELD FROM table WHERE COUNTY_FIELD = 'County Mayo' AND ENGLISH_NAME_FIELD = 'Carrowteige'
+<|endoftext|>
+<|startoftext|>
+COUNTY_FIELD : text_TYPE, ENGLISH_NAME_FIELD : text_TYPE, IRISH_NAME_FIELD : text_TYPE, POPULATION_FIELD : real_TYPE, IRISH_SPEAKERS_FIELD : text_TYPE | What is the Irish name listed with var0 Irish speakers ? | SELECT  IRISH_NAME_FIELD FROM table WHERE IRISH_SPEAKERS_FIELD = '62%'
+<|endoftext|>
+<|startoftext|>
+COUNTY_FIELD : text_TYPE, ENGLISH_NAME_FIELD : text_TYPE, IRISH_NAME_FIELD : text_TYPE, POPULATION_FIELD : real_TYPE, IRISH_SPEAKERS_FIELD : text_TYPE | What is the population for the Irish Name Leitir mealláin ? | SELECT  POPULATION_FIELD FROM table WHERE IRISH_NAME_FIELD = 'Leitir Mealláin'
+<|endoftext|>
+<|startoftext|>
+COUNTY_FIELD : text_TYPE, ENGLISH_NAME_FIELD : text_TYPE, IRISH_NAME_FIELD : text_TYPE, POPULATION_FIELD : real_TYPE, IRISH_SPEAKERS_FIELD : text_TYPE | What is the county for the Irish name Carna ? | SELECT  COUNTY_FIELD FROM table WHERE IRISH_NAME_FIELD = 'Carna'
+<|endoftext|>
+<|startoftext|>
+COUNTY_FIELD : text_TYPE, ENGLISH_NAME_FIELD : text_TYPE, IRISH_NAME_FIELD : text_TYPE, POPULATION_FIELD : real_TYPE, IRISH_SPEAKERS_FIELD : text_TYPE | How many County Kerry have var0 Irish speakers ? | SELECT COUNT ENGLISH_NAME_FIELD FROM table WHERE IRISH_SPEAKERS_FIELD = '53%' AND COUNTY_FIELD = 'County Kerry'
+<|endoftext|>
+<|startoftext|>
+COUNTY_FIELD : text_TYPE, ENGLISH_NAME_FIELD : text_TYPE, IRISH_NAME_FIELD : text_TYPE, POPULATION_FIELD : real_TYPE, IRISH_SPEAKERS_FIELD : text_TYPE | What is the population for the English name Spiddal ? | SELECT  POPULATION_FIELD FROM table WHERE ENGLISH_NAME_FIELD = 'Spiddal'
+<|endoftext|>
+<|startoftext|>
+STATE/TERRITORY_FIELD : text_TYPE, ASIAN_AMERICAN_POPULATION_(2010_CENSUS)_FIELD : real_TYPE, CHINESE_FIELD : real_TYPE, FILIPINO_FIELD : real_TYPE, INDIAN_FIELD : real_TYPE, JAPANESE_FIELD : real_TYPE, KOREAN_FIELD : real_TYPE, VIETNAMESE_FIELD : real_TYPE, OTHER_ASIAN_FIELD : real_TYPE | What is the the Chinese population for the state that has a Filipino population of var0 ? | SELECT MIN CHINESE_FIELD FROM table WHERE FILIPINO_FIELD = 1474707
+<|endoftext|>
+<|startoftext|>
+STATE/TERRITORY_FIELD : text_TYPE, ASIAN_AMERICAN_POPULATION_(2010_CENSUS)_FIELD : real_TYPE, CHINESE_FIELD : real_TYPE, FILIPINO_FIELD : real_TYPE, INDIAN_FIELD : real_TYPE, JAPANESE_FIELD : real_TYPE, KOREAN_FIELD : real_TYPE, VIETNAMESE_FIELD : real_TYPE, OTHER_ASIAN_FIELD : real_TYPE | How many States have an Indian population of var0 ? | SELECT COUNT FILIPINO_FIELD FROM table WHERE INDIAN_FIELD = 30947
+<|endoftext|>
+<|startoftext|>
+STATE/TERRITORY_FIELD : text_TYPE, ASIAN_AMERICAN_POPULATION_(2010_CENSUS)_FIELD : real_TYPE, CHINESE_FIELD : real_TYPE, FILIPINO_FIELD : real_TYPE, INDIAN_FIELD : real_TYPE, JAPANESE_FIELD : real_TYPE, KOREAN_FIELD : real_TYPE, VIETNAMESE_FIELD : real_TYPE, OTHER_ASIAN_FIELD : real_TYPE | What is the highest Indian population ? | SELECT MAX INDIAN_FIELD FROM table
+<|endoftext|>
+<|startoftext|>
+UN_OPERATION_NAME_FIELD : text_TYPE, UN_OPERATION_TITLE_FIELD : text_TYPE, LOCATION_FIELD : text_TYPE, DATES_OF_AUSTRALIAN_INVOLVEMENT_FIELD : text_TYPE, NUMBER_OF_AUSTRALIANS_INVOLVED_FIELD : text_TYPE, AUSTRALIAN_ROLE_FIELD : text_TYPE | What is Australia's role in the UN operation Unama ? | SELECT  AUSTRALIAN_ROLE_FIELD FROM table WHERE UN_OPERATION_NAME_FIELD = 'UNAMA'
+<|endoftext|>
+<|startoftext|>
+UN_OPERATION_NAME_FIELD : text_TYPE, UN_OPERATION_TITLE_FIELD : text_TYPE, LOCATION_FIELD : text_TYPE, DATES_OF_AUSTRALIAN_INVOLVEMENT_FIELD : text_TYPE, NUMBER_OF_AUSTRALIANS_INVOLVED_FIELD : text_TYPE, AUSTRALIAN_ROLE_FIELD : text_TYPE | What is the UN operation title with the UN operation name , Uncok ? | SELECT  UN_OPERATION_TITLE_FIELD FROM table WHERE UN_OPERATION_NAME_FIELD = 'UNCOK'
+<|endoftext|>
+<|startoftext|>
+UN_OPERATION_NAME_FIELD : text_TYPE, UN_OPERATION_TITLE_FIELD : text_TYPE, LOCATION_FIELD : text_TYPE, DATES_OF_AUSTRALIAN_INVOLVEMENT_FIELD : text_TYPE, NUMBER_OF_AUSTRALIANS_INVOLVED_FIELD : text_TYPE, AUSTRALIAN_ROLE_FIELD : text_TYPE | How many Australians were in the UN commission on Korea ? | SELECT COUNT NUMBER_OF_AUSTRALIANS_INVOLVED_FIELD FROM table WHERE UN_OPERATION_TITLE_FIELD = 'UN Commission on Korea'
+<|endoftext|>
+<|startoftext|>
+UN_OPERATION_NAME_FIELD : text_TYPE, UN_OPERATION_TITLE_FIELD : text_TYPE, LOCATION_FIELD : text_TYPE, DATES_OF_AUSTRALIAN_INVOLVEMENT_FIELD : text_TYPE, NUMBER_OF_AUSTRALIANS_INVOLVED_FIELD : text_TYPE, AUSTRALIAN_ROLE_FIELD : text_TYPE | When was it where var0 Australians were involved in the UN ? | SELECT  DATES_OF_AUSTRALIAN_INVOLVEMENT_FIELD FROM table WHERE NUMBER_OF_AUSTRALIANS_INVOLVED_FIELD = 65
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : real_TYPE, TIMESLOT_(_ET_)_FIELD : text_TYPE, SEASON_PREMIERE_FIELD : text_TYPE, SEASON_FINALE_FIELD : text_TYPE, TV_SEASON_FIELD : text_TYPE, RANK_FIELD : text_TYPE, VIEWERS_(MILLIONS)_FIELD : text_TYPE | What year is the season with the var0 million views ? | SELECT  TV_SEASON_FIELD FROM table WHERE VIEWERS_(MILLIONS)_FIELD = '10.73'
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : real_TYPE, TIMESLOT_(_ET_)_FIELD : text_TYPE, SEASON_PREMIERE_FIELD : text_TYPE, SEASON_FINALE_FIELD : text_TYPE, TV_SEASON_FIELD : text_TYPE, RANK_FIELD : text_TYPE, VIEWERS_(MILLIONS)_FIELD : text_TYPE | What is the season year where the rank is var0 ? | SELECT  TV_SEASON_FIELD FROM table WHERE RANK_FIELD = 39
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : real_TYPE, TIMESLOT_(_ET_)_FIELD : text_TYPE, SEASON_PREMIERE_FIELD : text_TYPE, SEASON_FINALE_FIELD : text_TYPE, TV_SEASON_FIELD : text_TYPE, RANK_FIELD : text_TYPE, VIEWERS_(MILLIONS)_FIELD : text_TYPE | What is the number of season premieres were var0 people watched ? | SELECT COUNT SEASON_PREMIERE_FIELD FROM table WHERE VIEWERS_(MILLIONS)_FIELD = '10.17'
+<|endoftext|>
+<|startoftext|>
+SEASON_FIELD : real_TYPE, TIMESLOT_(_ET_)_FIELD : text_TYPE, SEASON_PREMIERE_FIELD : text_TYPE, SEASON_FINALE_FIELD : text_TYPE, TV_SEASON_FIELD : text_TYPE, RANK_FIELD : text_TYPE, VIEWERS_(MILLIONS)_FIELD : text_TYPE | What is the year of the season that was var0 ? | SELECT  TV_SEASON_FIELD FROM table WHERE SEASON_FIELD = 12
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, STARTS_FIELD : real_TYPE, WINS_FIELD : real_TYPE, TOP_5_FIELD : real_TYPE, TOP_10_FIELD : real_TYPE, POLES_FIELD : real_TYPE, AVG._START_FIELD : text_TYPE, AVG._FINISH_FIELD : text_TYPE, WINNINGS_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, TEAM(S)_FIELD : text_TYPE | In var0 what was the average finish ? | SELECT  AVG._FINISH_FIELD FROM table WHERE YEAR_FIELD = 2012
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, STARTS_FIELD : real_TYPE, WINS_FIELD : real_TYPE, TOP_5_FIELD : real_TYPE, TOP_10_FIELD : real_TYPE, POLES_FIELD : real_TYPE, AVG._START_FIELD : text_TYPE, AVG._FINISH_FIELD : text_TYPE, WINNINGS_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, TEAM(S)_FIELD : text_TYPE | How many wins happened in var0 ? | SELECT MIN WINS_FIELD FROM table WHERE YEAR_FIELD = 1983
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, STARTS_FIELD : real_TYPE, WINS_FIELD : real_TYPE, TOP_5_FIELD : real_TYPE, TOP_10_FIELD : real_TYPE, POLES_FIELD : real_TYPE, AVG._START_FIELD : text_TYPE, AVG._FINISH_FIELD : text_TYPE, WINNINGS_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, TEAM(S)_FIELD : text_TYPE | How many top tens had an average start of var0 ? | SELECT COUNT TOP_10_FIELD FROM table WHERE AVG._START_FIELD = '29.4'
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, STARTS_FIELD : real_TYPE, WINS_FIELD : real_TYPE, TOP_5_FIELD : real_TYPE, TOP_10_FIELD : real_TYPE, POLES_FIELD : real_TYPE, AVG._START_FIELD : text_TYPE, AVG._FINISH_FIELD : text_TYPE, WINNINGS_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, TEAM(S)_FIELD : text_TYPE | How many poles had an average finish of var0 ? | SELECT MAX POLES_FIELD FROM table WHERE AVG._FINISH_FIELD = '19.1'
+<|endoftext|>
+<|startoftext|>
+YEAR_FIELD : real_TYPE, STARTS_FIELD : real_TYPE, WINS_FIELD : real_TYPE, TOP_5_FIELD : real_TYPE, TOP_10_FIELD : real_TYPE, POLES_FIELD : real_TYPE, AVG._START_FIELD : text_TYPE, AVG._FINISH_FIELD : text_TYPE, WINNINGS_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, TEAM(S)_FIELD : text_TYPE | How many starts did Hendrick motorsports have ? | SELECT MIN STARTS_FIELD FROM table WHERE STARTS_FIELD0 = 'Hendrick Motorsports'
+<|endoftext|>
+<|startoftext|>
+PICK_FIELD : real_TYPE, PLAYER_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, NHL_TEAM_FIELD : text_TYPE, COLLEGE/JUNIOR/CLUB_TEAM_FIELD : text_TYPE | NHL players are all centre in Florida panthers . | SELECT  PLAYER_FIELD FROM table WHERE POSITION_FIELD = 'Centre' AND NHL_TEAM_FIELD = 'Florida Panthers'
+<|endoftext|>
+<|startoftext|>
+PICK_FIELD : real_TYPE, PLAYER_FIELD : text_TYPE, POSITION_FIELD : text_TYPE, NATIONALITY_FIELD : text_TYPE, NHL_TEAM_FIELD : text_TYPE, COLLEGE/JUNIOR/CLUB_TEAM_FIELD : text_TYPE | NHL team player San Jose Sharks is United States nationally . | SELECT  PLAYER_FIELD FROM table WHERE NHL_TEAM_FIELD = 'San Jose Sharks' AND NATIONALITY_FIELD = 'United States'
+<|endoftext|>

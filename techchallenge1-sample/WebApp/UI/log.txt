@@ -1,0 +1,1000 @@
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has price is 15500
+A: SELECT  CAR_FIELD FROM df WHERE PRICE_FIELD = '15500$'abc
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has price is 15500
+A: SELECT  CAR FROM df WHERE PRICE = '15500$'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has body is van
+A: SELECT  CAR FROM df WHERE BODY = 'Vries'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has body is sedan
+A: SELECT  CAR FROM df WHERE BODY = 'Sideways'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has body is crossover
+A: SELECT  CAR FROM df WHERE BODY = 'Crossover'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has body is crossover
+A: select  car from df where body = 'crossover'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that registration is yes
+A: select count car from df where reiner = 'yes'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration
+Q:how many car that registration is yes
+A: select count car from df where registration = 'yes'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration
+Q:how many car that registration is yes
+A: SELECT COUNT CAR_FIELD FROM df WHERE REGISTRATION_FIELD = 'Yes'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration
+Q:how many car that registration is yes
+A: SELECT COUNT CAR_FIELD FROM df WHERE REGISTRATION_FIELD = 'Yes'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration
+Q:how many car that registration is yes
+A: select count car from df where registration = 'yes'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration
+Q:show car that registration is yes
+A: select  car from df where registration = 'yes'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration
+Q:show distinct car that registration is yes
+A: select  car from df where registration = 'yes'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car has registration that is true
+A: select count car from df where number = '1.0'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration,year
+Q:how many car has registration that is true
+A: select count car from df where year = '2000-01'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration,model
+Q:how many car has registration that is true
+A: select count car from df where model_number = '1.0'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration,model
+Q:how many car has registration that is true
+A: of the model number var0 | SELECT COUNT CAR_FIELD FROM df WHERE MODEL_NUMBER_FIELD = '1.0'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration,model
+Q:how many car has registration that is true
+A: select count car from df where model_number = '1.0'
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration,model
+Q:show car that price is more than 15500
+A: select  car from df where price = '15500'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration,model
+Q:show car that price is more than 15500
+A:select car_field from df where price_field = "15500"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body,registration,model
+Q:show car that price is more than 15500
+A:select car from df where price = "15500"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that price over 12000
+A:select count car_price from df where price = "12000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that  has price over 12000
+A:select count car from df where price_over_12000 = "12000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that  has price is over 12000
+A:select count car from df where price = "12000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that  has price is over 12000
+A:select count car from df where price = "12000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that  has price is over 12000
+A: 
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that  has price is over 12000
+A:
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that  has price is over 12000
+A:select count car from df where price = "12000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that  has price is over 12000
+A:select __agg_count__ car from df where price = "12000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that has price is higher than 15500
+A:select count car_price from df where price = "15500 usd"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that has price is higher than 15500
+A:select count car_price from df where price = "15500 usd"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that has price is higher than 15500
+A:select count car_price from df where price = "15500 usd"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car has price is higher than 15500
+A:select count car from df where price = "15500"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car has price is higher than 15500
+A:select ( count ) car from df where price = "15500"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car has price is higher than 15500
+A:select count ( car ) from df where price = "15500"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show me the most expensive car
+A:select price from df where car_num = "5,000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show most expensive car
+A:select price from df where car_num = "5,000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that is highest price
+A:select max ( price ) from df where car = "highly price"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that is max price
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that is highest price
+A:select max ( price ) from df where car = "highly price"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has price that is 155000
+A:select car from df where price = "155000 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has price that is 155000 and body is other
+A:select car from df where price : number_type and body = "155000"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has price that is 155000 and body is van
+A:select car from df where body = "155000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has body is van
+A:select car from df where body = "vries"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has body is sedan
+A:select car from df where body = "sideways"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has body is sedan
+A:, and the number of the car is the number of the car is the number of the car is the number of the car is the number of the car is the number of the car is the number of the car is the number of the car is
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:which car has body is sedan
+A:select car from df where body = "sideways"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show difference price
+A:select division from df where price = "$1.50"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that pricce is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that name start with J
+A:select car from df where name = "jayne_millions"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that name start with J
+A:select car from df where name = "jayne_millions"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:how many car that is BMW
+A:select count ( car ) from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 15000
+A:select car from df where price = "15000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 15000 or over
+A:select car_name from df where price = 15000 and candidine = "ford"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 18500
+A:select car from df where price = "18500$"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 18000
+A:select car from df where price = "18000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is over 15600
+A:select car from df where price = "15600 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is more than 15500
+A:select car from df where price = "15500"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car THAT price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car THAT price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car THAT price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car THAT price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A: select  car from df where price = '15500 usd'
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = `` 15500 usd ''
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = __val_38_48__
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than fifty
+A:select car from df where price = "$50"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "1,100"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than fifteen
+A:select car from df where price = "15 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500, body is van
+A:select car from df where price = "15500"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show        car that price is       higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car_price from df where body = "15500$"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select body from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select body from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car_price from df where body = "15500$"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car_price from df where body = "15500$"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 15000
+A:select car_price from df where car_name = "toyota"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 15000
+A:select car_price from df where car_name = "toyota"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 15000
+A:select car from df where price = "15000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is 15000
+A:select car from df where price = "15000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price was higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car_price from df where body = "15500$"
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than 15500
+A:select car from df where price = "15500 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show some car
+A:s e l e c t c a r _ n u m b e r f r o m t a b l e
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show some car
+A:select car_number from df
+Correct : False
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car
+A:select car from df
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1.00"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than one hundred and one
+A:select car from df where price = "$1,000"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than fifty two
+A:select car from df where price = "50.2"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than fifty two
+A:select car from df where price = "52 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than fifty two
+A:select car from df where price = "50.2"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than fifty two
+A:select car from df where price = "52 usd"
+Correct : True
+
+
+model:baseline
+FILE : car_ad.csv
+SCHEMA:car,price,body
+Q:show car that price is higher than fifty two
+A:select car from df where price = "52 usd"
+Correct : True
+
+

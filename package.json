@@ -1,0 +1,13 @@
+{
+  "name": "techchallenge1_kms",
+  "version": "1.0.0",
+  "description": "Turn text to SQL challenge",
+  "scripts": {
+    "install": "cd techchallenge1-sample && pip install -r requirements.txt",
+    "start-web": "cd techchallenge1-sample/WebApp && streamlit run UI/app.py",
+    "start-api": "cd techchallenge1-sample/WebApp && python API/main.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
